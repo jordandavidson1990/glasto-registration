@@ -37,7 +37,7 @@ export default function Home() {
       </header>
 
       <section className="stage" id="top" onMouseMove={shiftArtwork} onMouseLeave={() => setImagePosition({ x: 50, y: 45 })}>
-        <Image className="stage-image" src="/pyramid-stage-art.gif" alt="Illustration of the Pyramid Stage at Glastonbury Festival" fill priority unoptimized sizes="(max-width: 1100px) 100vw, 1100px" style={{ objectPosition: `${imagePosition.x}% ${imagePosition.y}%` }} />
+        <Image className="stage-image" src="/pyramid-stage-art.gif" alt="The Pyramid Stage at Glastonbury Festival" fill priority unoptimized sizes="(max-width: 1100px) 100vw, 1100px" style={{ objectPosition: `${imagePosition.x}% ${imagePosition.y}%` }} />
         <div className="stage-caption"><span>Pyramid Stage</span><span>Worthy Farm</span></div>
       </section>
 
@@ -55,8 +55,8 @@ export default function Home() {
           {people.map((person, index) => (
             <div className="person-row" role="row" key={person.id}>
               <strong><span className="row-index">{String(index + 1).padStart(2, "0")}</span>{person.name}</strong>
-              <code>{person.registration}</code>
-              <span>{person.postcode}</span>
+              <code data-label="Registration">{person.registration}</code>
+              <span data-label="Postcode">{person.postcode}</span>
               <button onClick={() => copyDetails(person)}>{copied === person.id ? "Copied" : "Copy"}</button>
             </div>
           ))}

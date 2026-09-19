@@ -1,37 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Glastonbury registrations
 
-## Getting Started
+A small, shared Glastonbury registration lookup for a festival crew. It is a static Next.js site: registration details are stored in the repository and deployed with the site, so every visitor sees the same current list.
 
-First, run the development server:
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Update registrations
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Edit [app/registrations.ts](app/registrations.ts). Each person needs a stable `id`, name, registration number, and registered postcode. A note is optional.
 
-## Learn More
+```ts
+{
+  id: "jane-doe",
+  name: "Jane Doe",
+  registration: "1234567890",
+  postcode: "BA6 8JJ",
+  note: "Optional",
+}
+```
 
-To learn more about Next.js, take a look at the following resources:
+Commit, push, and redeploy after any change. The site does not use a database or browser storage.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Check before deploying
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run lint
+npm run build -- --webpack
+```
 
-## Deploy on Vercel
+## Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Deploy the repository to your preferred Next.js host, such as Vercel. Each push to the connected production branch can trigger a new deployment.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# glasto-registration
+## Privacy
+
+Registration numbers and postcodes are sensitive personal details. Anyone who can open the deployed site can view them. Keep the repository private and put the deployed site behind authentication or password protection before sharing it outside the intended group.
+
+## Assets
+
+The site uses the Pyramid Stage artwork at `public/pyramid-stage-art.gif` and the Glastonbury banner asset in `public/Glastonbury - Registration Lookup_files/`. The rest of the downloaded saved-page material is intentionally ignored by Git.
