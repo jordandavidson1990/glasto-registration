@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "The Worthy Registry",
-  description: "A private place for your festival crew registration details.",
+  title: "The Glasto Blastos",
+  description:
+    "Names, registrations and postcodes of Glastonbury Festival 2026 attendees",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
