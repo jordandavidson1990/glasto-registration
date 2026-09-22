@@ -33,4 +33,10 @@ export const registrations: Registration[] = [
     registration: "2292931903",
     postcode: "G41 3HR",
   },
+  {
+    id: "emma-cockburn",
+    name: "Emma Cockburn",
+    registration: "945300668",
+    postcode: "G41 2SX",
+  },
 ];
