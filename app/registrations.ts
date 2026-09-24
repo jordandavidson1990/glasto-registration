@@ -40,10 +40,10 @@ export const registrations: Registration[] = [
     postcode: "G41 2SX",
   },
   {
-    id: "lorna-begg",
-    name: "Lorna Begg",
-    registration: "3608505278",
-    postcode: "G31 2QG",
+    id: "jack-thomas",
+    name: "Jack Thomas",
+    registration: "2397716329",
+    postcode: "G41 2SX",
   },
   {
     id: "adam-murdoch",
@@ -58,15 +58,15 @@ export const registrations: Registration[] = [
     postcode: "G31 2QU",
   },
   {
+    id: "lorna-begg",
+    name: "Lorna Begg",
+    registration: "3608505278",
+    postcode: "G31 2QG",
+  },
+  {
     id: "michael-boyle",
     name: "Michael Boyle",
     registration: "2986949215",
     postcode: "G31 2QG",
-  },
-  {
-    id: "jack-thomas",
-    name: "Jack Thomas",
-    registration: "2397716329",
-    postcode: "G41 2SX",
   },
 ];
