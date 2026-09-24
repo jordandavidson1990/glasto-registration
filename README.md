@@ -2,6 +2,8 @@
 
 A small, shared Glastonbury registration lookup for a festival crew. It is a static Next.js site: registration details are stored in the repository and deployed with the site, so every visitor sees the same current list.
 
+The site is hosted at [https://glasto-registration.vercel.app/](https://glasto-registration.vercel.app/).
+
 ## Run locally
 
 ```bash
