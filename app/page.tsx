@@ -18,9 +18,7 @@ export default function Home() {
   }, [query]);
 
   async function copyDetails(person: Registration) {
-    await navigator.clipboard.writeText(
-      `${person.registration}\n${person.postcode}`
-    );
+    await navigator.clipboard.writeText(person.registration);
     setCopied(person.id);
     window.setTimeout(() => setCopied(null), 1600);
   }
